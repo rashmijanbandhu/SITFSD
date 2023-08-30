@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<script>
+let answer1 = "It's alright";
+let answer2 = "He is called 'Johnny'";
+let answer3 = 'He is called "Johnny"'; 
+
+document.getElementById("demo").innerHTML =
+answer1 + "<br>" + answer2 + "<br>" + answer3; 
+
+//To find the length of a string, use the built-in length property:
+
+let length = answer1.length;
+document.getElementById("demo1").innerHTML = "the length of answer1 is " +
+length ;
+
+//The sequence \" \' \\  inserts a double quote in a string:
+//
+
+let text = "We are the so-called \"Vikings\" from the north.";
+document.getElementById("demo2").innerHTML = text;
+
+//slice() extracts a part of a string and returns the extracted part in a new string.
+
+let text1 = "Apple, Banana, Kiwi";
+let part = text1.slice(7,13);
+document.getElementById("demo3").innerHTML = part; 
+
+//If you omit the second parameter, the method will slice out the rest of the string:
+//substring() is similar to slice().
+
+let part1 = text1.slice(7)
+document.getElementById("demo4").innerHTML = part1;
+//If a parameter is negative, the position is counted from the end of the string:
+let part2 = text1.slice(-4);
+document.getElementById("demo5").innerHTML = part2;
+
+//add index of 
+
+
+
+
+
+</script>
+
+</body>
+</html>
