@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation Example</title>
+  <style>
+    .center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  text-align: left;
+}
+    </style>
+</head>
+<body>
+  <div class="center">
+  <h1>Form Validation Example</h1>
+  <form id="myForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="number">Number:</label>
+    <input type="tel" id="number" name="number" pattern="[0-9]{10}" required>
+    <small>Enter a 10-digit number</small><br><br>
+    
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" required></textarea><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <label for="female">Female</label><br><br>
+    
+    <label>Languages Known:</label>
+    <input type="checkbox" id="english" name="languages" value="english">
+    <label for="english">English</label>
+    <input type="checkbox" id="spanish" name="languages" value="spanish">
+    <label for="spanish">Spanish</label><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+  </div>
+  
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var number = document.getElementById("number").value;
+      var address = document.getElementById("address").value;
+      var email = document.getElementById("email").value;
+      
+      if (name === "") {
+        alert("Name field cannot be empty");
+        return false;
+      }
+      
+      if (!isValidNumber(number)) {
+        alert("Please enter a valid 10-digit number");
+        return false;
+      }
+      
+      if (address === "") {
+        alert("Address field cannot be empty");
+        return false;
+      }
+      
+      if (email === "") {
+        alert("Email field cannot be empty");
+        return false;
+      } else if (!isValidEmail(email)) {
+        alert("Please enter a valid email address");
+        return false;
+      }
+      
+      return true; // If all validations pass, the form can be submitted
+    }
+    
+    function isValidNumber(number) {
+      var numberRegex = /^\d{10}$/;
+      return numberRegex.test(number);
+    }
+    
+    function isValidEmail(email) {
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+</body>
+</html>
