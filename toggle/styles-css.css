@@ -1,0 +1,45 @@
+/* Container to center content */
+.container {
+    text-align: center;
+    margin: 50px auto;
+}
+
+/* Toggle Button Styles */
+.toggle-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #2980b9;
+}
+
+/* Navigation Menu Styles */
+.navigation-menu {
+    display: none;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #3498db;
+}
