@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+        const fruits = ['apple', 'banana', 'cherry'];
+
+        console.log(fruits[0]); // Outputs 'apple'
+
+        fruits.push('orange'); // Adds 'orange' to the end
+        console.log(fruits);
+        fruits.unshift('strawberry'); // Adds 'strawberry' to the beginning
+        console.log(fruits);
+        fruits[3] = 'grape'; // Adds 'grape' at index 3
+        console.log(fruits);
+
+        fruits.pop(); // Removes the last element ('grape')
+        console.log(fruits);
+        fruits.shift(); // Removes the first element ('strawberry')
+        console.log(fruits);
+        fruits.splice(1, 1); // Removes one element at index 1 ('banana')
+        console.log(fruits);
+
+       
+
+        fruits.forEach(function (fruit) {
+            console.log(fruit);
+        });
+
+        const numbers = [1, 2, 3, 4, 5];
+
+        const doubled = numbers.map(function (num) {
+            return num * 2;
+        });
+        console.log(doubled);
+
+        const matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+
+        console.log(matrix[1][2]); // Accessing element in the second row, third column (outputs 6)
+
+
+
+        </script>
+</body>
+</html>
