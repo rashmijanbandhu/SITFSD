@@ -1,0 +1,1 @@
+console.log("This is a minified JavaScript file.....");
